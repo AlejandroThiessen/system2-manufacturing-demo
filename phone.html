@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="robots" content="noindex" />
+    <title>System 2 Manufacturing · Móvil</title>
+    <style>
+      html { background: #f6f7f9; color-scheme: light; }
+      html.dark { background: #0b0d12; color-scheme: dark; }
+    </style>
+    <script>
+      (function () {
+        try {
+          var saved = JSON.parse(localStorage.getItem("s2:ui") || "{}").state || {};
+          var theme = saved.theme || "system";
+          var dark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.classList.toggle("dark", dark);
+          if (saved.language) document.documentElement.lang = saved.language;
+        } catch (_) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/phone-ItXvgFhX.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/demo-CkBTS_yf.js">
+    <link rel="modulepreload" crossorigin href="./assets/use-format-eQDYdCDF.js">
+    <link rel="modulepreload" crossorigin href="./assets/logo-C3Y4vIX_.js">
+    <link rel="modulepreload" crossorigin href="./assets/card-Choa3vDI.js">
+    <link rel="modulepreload" crossorigin href="./assets/confirm-dialog-OvVpe2az.js">
+    <link rel="modulepreload" crossorigin href="./assets/input-Ckh1K-pX.js">
+    <link rel="modulepreload" crossorigin href="./assets/circle-check-CYbT1U_N.js">
+    <link rel="modulepreload" crossorigin href="./assets/send-B1LTFy-o.js">
+    <link rel="modulepreload" crossorigin href="./assets/circle-x-DUdoGMpY.js">
+    <link rel="modulepreload" crossorigin href="./assets/hourglass-B8kvtPYj.js">
+    <link rel="modulepreload" crossorigin href="./assets/capture-page-CYJkxQuc.js">
+    <link rel="stylesheet" crossorigin href="./assets/demo-B40Xj7vJ.css">
+    <link rel="stylesheet" crossorigin href="./assets/use-format-D8K2R-wk.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

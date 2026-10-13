@@ -1,0 +1,1 @@
+const a=/\b(S\.?\s?L\.?(U\.?)?|S\.?\s?A\.?(\s?DE\s?C\.?V\.?)?|S\.?\s?C\.?|C\.?\s?B\.?|S\.?\s?COOP\.?|SPR DE RL)\.?$/i,r=new Set(["de","del","y","la","las","los","el","e"]);function l(s){return s.replace(a,"").trim().replace(/[,.]+$/,"").trim().toLowerCase().split(/\s+/).map((e,t)=>t>0&&r.has(e)?e:e.charAt(0).toUpperCase()+e.slice(1)).join(" ")}export{l as p};

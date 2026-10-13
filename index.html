@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System 2 Manufacturing · La oficina de tu taller, al día sola</title>
+    <meta
+      name="description"
+      content="Para talleres y fabricantes: las facturas, albaranes y tickets se leen solos, el stock y los costes se actualizan y la producción sabe lo que cuesta cada pieza. Prueba la demo en el navegador."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta property="og:title" content="System 2 Manufacturing" />
+    <meta property="og:description" content="La oficina de tu taller, al día sola. Prueba la demo en el navegador." />
+    <meta property="og:image" content="./shots/review.webp" />
+    <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <style>
+      html { background: #f6f7f9; color-scheme: light; }
+      html.dark { background: #0b0d12; color-scheme: dark; }
+      html[data-lang="es"] [data-l="en"], html[data-lang="en"] [data-l="es"] { display: none !important; }
+    </style>
+    <script>
+      // Language (the visitor's, unless chosen here) and theme (the system's), before the first paint.
+      (function () {
+        var lang = "es";
+        try {
+          var chosen = localStorage.getItem("s2-site-lang");
+          lang = chosen || (navigator.language && navigator.language.toLowerCase().indexOf("es") !== 0 ? "en" : "es");
+        } catch (_) {}
+        document.documentElement.setAttribute("data-lang", lang);
+        document.documentElement.lang = lang;
+        document.documentElement.classList.toggle("dark", window.matchMedia("(prefers-color-scheme: dark)").matches);
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/index-BtjLJuBP.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/demo-CkBTS_yf.js">
+    <link rel="stylesheet" crossorigin href="./assets/demo-B40Xj7vJ.css">
+  </head>
+  <body class="bg-background text-foreground antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus:bg-primary focus:px-3 focus:py-2 focus:text-primary-foreground">
+      <span data-l="es">Ir al contenido</span><span data-l="en">Skip to content</span>
+    </a>
+
+    <header class="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3 sm:px-6">
+        <a href="./index.html" class="flex items-center gap-2.5" aria-label="System 2 Manufacturing">
+          <svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#2350d1" />
+            <path d="M9 11.5c0-2 1.7-3.5 4.2-3.5 2.6 0 4.3 1.5 4.3 3.6 0 1.6-.9 2.7-2.6 4L11.6 18.6H18v2.9H9v-2.4l5.1-4.3c1-.9 1.4-1.4 1.4-2.1 0-.8-.7-1.4-1.8-1.4-1.2 0-1.9.7-1.9 1.8H9Z" fill="#fff" />
+            <rect x="20" y="18.6" width="3.5" height="2.9" rx="1" fill="#9db4ff" />
+          </svg>
+          <span class="grid leading-tight">
+            <span class="text-[15px] font-semibold tracking-tight">System 2</span>
+            <span class="text-xs font-medium text-muted">Manufacturing</span>
+          </span>
+        </a>
+        <nav class="ml-auto hidden items-center gap-6 text-sm text-muted md:flex" aria-label="Secciones">
+          <a href="#como" class="hover:text-foreground"><span data-l="es">Cómo funciona</span><span data-l="en">How it works</span></a>
+          <a href="#movil" class="hover:text-foreground"><span data-l="es">El móvil</span><span data-l="en">The phone</span></a>
+          <a href="#produccion" class="hover:text-foreground"><span data-l="es">Producción</span><span data-l="en">Production</span></a>
+          <a href="#datos" class="hover:text-foreground"><span data-l="es">Tus datos</span><span data-l="en">Your data</span></a>
+        </nav>
+        <button type="button" data-toggle-lang class="ml-auto inline-flex h-9 items-center rounded-lg px-3 text-sm font-medium text-muted hover:bg-surface-2 hover:text-foreground md:ml-0">
+          <span data-l="es">English</span><span data-l="en">Español</span>
+        </button>
+        <a href="./app.html" class="hidden h-9 items-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm hover:bg-primary-hover sm:inline-flex">
+          <span data-l="es">Probar la demo</span><span data-l="en">Try the demo</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="relative overflow-hidden">
+        <div class="pointer-events-none absolute -top-40 left-1/2 -z-10 h-[34rem] w-[64rem] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" aria-hidden="true"></div>
+        <div class="mx-auto grid max-w-6xl gap-12 px-4 pt-16 pb-20 sm:px-6 lg:grid-cols-[1fr_1.15fr] lg:items-center lg:pt-24">
+          <div>
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-muted">
+              <span class="size-1.5 rounded-full bg-success" aria-hidden="true"></span>
+              <span data-l="es">Para talleres y fabricantes</span><span data-l="en">For workshops and manufacturers</span>
+            </p>
+            <h1 class="text-4xl leading-[1.1] font-semibold tracking-tight text-balance sm:text-5xl">
+              <span data-l="es">La oficina de tu taller, al día sola</span>
+              <span data-l="en">Your workshop's office, up to date on its own</span>
+            </h1>
+            <p class="mt-5 max-w-xl text-lg leading-relaxed text-muted">
+              <span data-l="es">Las facturas, albaranes y tickets de tus proveedores se leen solos. El stock y el coste de cada material se actualizan, y las listas de materiales y la producción siempre saben lo que cuesta cada pieza. Tú solo revisas y apruebas.</span>
+              <span data-l="en">Your suppliers' invoices, delivery notes and receipts read themselves. Stock and the cost of every material update, and bills of materials and production always know what each part costs. You only check and approve.</span>
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+              <a href="./app.html" class="inline-flex h-12 items-center gap-2 rounded-xl bg-primary px-6 text-base font-medium text-primary-foreground shadow-sm hover:bg-primary-hover">
+                <span data-l="es">Probar la demo</span><span data-l="en">Try the demo</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="#como" class="inline-flex h-12 items-center rounded-xl border border-border-strong bg-surface px-5 text-base font-medium hover:bg-surface-2">
+                <span data-l="es">Cómo funciona</span><span data-l="en">How it works</span>
+              </a>
+            </div>
+            <p class="mt-4 text-sm text-subtle">
+              <span data-l="es">La demo funciona en el navegador, sin instalar nada, con las cuentas inventadas de un taller metálico.</span>
+              <span data-l="en">The demo runs in your browser, nothing to install, with the made-up books of a metal workshop.</span>
+            </p>
+          </div>
+          <div class="relative">
+            <figure class="overflow-hidden rounded-2xl border border-border bg-surface shadow-2xl shadow-primary/10">
+              <div class="flex items-center gap-1.5 border-b border-border bg-surface-2 px-4 py-2.5" aria-hidden="true">
+                <span class="size-2.5 rounded-full bg-border-strong"></span><span class="size-2.5 rounded-full bg-border-strong"></span><span class="size-2.5 rounded-full bg-border-strong"></span>
+              </div>
+              <img src="./shots/review.webp" width="1440" height="900" alt="" class="block w-full" data-alt-es="La pantalla Revisar: una factura fotografiada con el móvil, leída, con el proveedor y cada línea reconocidos" data-alt-en="The Review screen: an invoice photographed with a phone, read, with its supplier and every line recognised" />
+            </figure>
+            <figure class="absolute -bottom-10 -left-4 hidden w-40 overflow-hidden rounded-[1.6rem] border-[6px] border-neutral-900 bg-surface shadow-2xl sm:block lg:-left-10 lg:w-48">
+              <img src="./shots/phone.webp" width="390" height="695" alt="" class="block w-full" data-alt-es="La pantalla del móvil: una foto de una factura lista para enviar a la oficina" data-alt-en="The phone screen: a photo of an invoice ready to send to the office" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="como" class="scroll-mt-20 border-y border-border bg-surface">
+        <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+          <h2 class="text-3xl font-semibold tracking-tight">
+            <span data-l="es">Cómo funciona</span><span data-l="en">How it works</span>
+          </h2>
+          <p class="mt-3 max-w-2xl text-muted">
+            <span data-l="es">Todo lo que llega se lee, se comprueba y se apunta en su sitio. Lo que tiene dudas te espera, con el original al lado.</span>
+            <span data-l="en">Everything that comes in is read, checked and booked where it belongs. Anything doubtful waits for you, with the original beside it.</span>
+          </p>
+          <ol class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <li class="rounded-2xl border border-border bg-background p-6">
+              <span class="inline-flex size-9 items-center justify-center rounded-lg bg-primary-soft font-semibold text-primary-soft-foreground">1</span>
+              <h3 class="mt-4 font-semibold"><span data-l="es">Llega el documento</span><span data-l="en">A document arrives</span></h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">
+                <span data-l="es">Por correo, por WhatsApp, en una carpeta del ordenador o con una foto del móvil de cualquiera del taller.</span>
+                <span data-l="en">By email, WhatsApp, a folder on the computer, or a photo from the phone of anyone in the workshop.</span>
+              </p>
+            </li>
+            <li class="rounded-2xl border border-border bg-background p-6">
+              <span class="inline-flex size-9 items-center justify-center rounded-lg bg-primary-soft font-semibold text-primary-soft-foreground">2</span>
+              <h3 class="mt-4 font-semibold"><span data-l="es">Se lee y se comprueba</span><span data-l="en">It's read and checked</span></h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">
+                <span data-l="es">La IA lee el proveedor, las líneas, los precios y el IVA. Se comprueban los totales, la cuenta bancaria, los duplicados y las subidas de precio.</span>
+                <span data-l="en">The AI reads the supplier, lines, prices and VAT. Totals, bank details, duplicates and price rises are checked.</span>
+              </p>
+            </li>
+            <li class="rounded-2xl border border-border bg-background p-6">
+              <span class="inline-flex size-9 items-center justify-center rounded-lg bg-primary-soft font-semibold text-primary-soft-foreground">3</span>
+              <h3 class="mt-4 font-semibold"><span data-l="es">Tú lo apruebas</span><span data-l="en">You approve it</span></h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">
+                <span data-l="es">Lo que tiene dudas espera en Revisar con el motivo y el original al lado. Se aprueba con una tecla.</span>
+                <span data-l="en">Anything unsure waits in Review with the reason and the original beside it. One key approves it.</span>
+              </p>
+            </li>
+            <li class="rounded-2xl border border-border bg-background p-6">
+              <span class="inline-flex size-9 items-center justify-center rounded-lg bg-primary-soft font-semibold text-primary-soft-foreground">4</span>
+              <h3 class="mt-4 font-semibold"><span data-l="es">Todo se pone al día</span><span data-l="en">Everything catches up</span></h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">
+                <span data-l="es">El stock, el coste de cada material, las listas de materiales y los precios de venta sugeridos. Todo queda apuntado y se puede deshacer.</span>
+                <span data-l="en">Stock, the cost of each material, bills of materials and suggested selling prices. Everything is logged and can be undone.</span>
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- The phone -->
+      <section id="movil" class="scroll-mt-20">
+        <div class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center">
+          <div class="order-2 flex justify-center lg:order-1">
+            <figure class="w-64 overflow-hidden rounded-[2.2rem] border-[10px] border-neutral-900 bg-surface shadow-2xl sm:w-72">
+              <img src="./shots/phone.webp" width="390" height="695" alt="" class="block w-full" data-alt-es="El móvil de un trabajador con la foto de una factura y una nota, listo para enviar" data-alt-en="A worker's phone with the photo of an invoice and a note, ready to send" />
+            </figure>
+          </div>
+          <div class="order-1 lg:order-2">
+            <p class="text-sm font-semibold text-link"><span data-l="es">Los móviles del taller</span><span data-l="en">The workshop's phones</span></p>
+            <h2 class="mt-2 text-3xl font-semibold tracking-tight">
+              <span data-l="es">Una foto, y está en la oficina</span><span data-l="en">One photo, and it's at the office</span>
+            </h2>
+            <p class="mt-4 text-muted leading-relaxed">
+              <span data-l="es">Cada trabajador con su móvil: foto al ticket del gasoil, al albarán del proveedor o a la factura, y llega a la oficina para revisarla. Ese móvil solo puede enviar fotos: no ve precios, clientes ni cuentas.</span>
+              <span data-l="en">Every worker with their own phone: a photo of the fuel receipt, the supplier's delivery note or the invoice, and it reaches the office to be checked. That phone can only send photos: it sees no prices, clients or accounts.</span>
+            </p>
+            <ul class="mt-6 grid gap-3 text-sm">
+              <li class="flex gap-3"><span class="mt-0.5 text-success" aria-hidden="true">✓</span><span><span data-l="es">Una foto por página: varias fotos son un solo documento.</span><span data-l="en">A photo per page: several photos make one document.</span></span></li>
+              <li class="flex gap-3"><span class="mt-0.5 text-success" aria-hidden="true">✓</span><span><span data-l="es">Una nota para la oficina: «pagado en efectivo», «para la obra de Ruiz».</span><span data-l="en">A note for the office: “paid in cash”, “for the Ruiz job”.</span></span></li>
+              <li class="flex gap-3"><span class="mt-0.5 text-success" aria-hidden="true">✓</span><span><span data-l="es">Sin cobertura, se guarda en el móvil y se envía solo después.</span><span data-l="en">No signal? It's kept on the phone and sent by itself later.</span></span></li>
+              <li class="flex gap-3"><span class="mt-0.5 text-success" aria-hidden="true">✓</span><span><span data-l="es">Ve si la oficina lo archivó o lo rechazó, y por qué.</span><span data-l="en">It sees whether the office filed or rejected it, and why.</span></span></li>
+              <li class="flex gap-3"><span class="mt-0.5 text-success" aria-hidden="true">✓</span><span><span data-l="es">Sin instalar nada: se vincula con un código QR desde el ordenador de la oficina.</span><span data-l="en">Nothing to install: it's linked with a QR code from the office computer.</span></span></li>
+            </ul>
+            <a href="./app.html?phone=1" class="mt-8 inline-flex h-11 items-center gap-2 rounded-xl bg-primary px-5 font-medium text-primary-foreground shadow-sm hover:bg-primary-hover">
+              <span data-l="es">Probar el móvil en la demo</span><span data-l="en">Try the phone in the demo</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Production -->
+      <section id="produccion" class="scroll-mt-20 border-y border-border bg-surface">
+        <div class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+          <div>
+            <p class="text-sm font-semibold text-link"><span data-l="es">Producción y costes</span><span data-l="en">Production and costs</span></p>
+            <h2 class="mt-2 text-3xl font-semibold tracking-tight">
+              <span data-l="es">Lo que cuesta cada pieza, hoy</span><span data-l="en">What each part costs, today</span>
+            </h2>
+            <p class="mt-4 text-muted leading-relaxed">
+              <span data-l="es">Escribe una vez la lista de materiales de cada producto: materiales, mermas y mano de obra. Cada factura que llega recalcula su coste y te sugiere el precio para tu margen. Para fabricar 40, la calculadora dice qué falta y lo pide a cada proveedor.</span>
+              <span data-l="en">Write each product's bill of materials once: materials, waste and labour. Every invoice that arrives recalculates its cost and suggests the price for your margin. To make 40, the calculator says what's missing and orders it from each supplier.</span>
+            </p>
+            <ul class="mt-6 grid gap-3 text-sm">
+              <li class="flex gap-3"><span class="mt-0.5 text-success" aria-hidden="true">✓</span><span><span data-l="es">Registrar una producción gasta los materiales y suma el producto al stock.</span><span data-l="en">Recording a run uses up the materials and adds the product to stock.</span></span></li>
+              <li class="flex gap-3"><span class="mt-0.5 text-success" aria-hidden="true">✓</span><span><span data-l="es">Los productos a medida gastan sus materiales al entregarse.</span><span data-l="en">Made-to-order products use up their materials when delivered.</span></span></li>
+              <li class="flex gap-3"><span class="mt-0.5 text-success" aria-hidden="true">✓</span><span><span data-l="es">«Se rompieron 2 bastidores»: se lo dices al asistente y lo apunta.</span><span data-l="en">“Two frames broke”: tell the assistant and it books it.</span></span></li>
+            </ul>
+          </div>
+          <figure class="overflow-hidden rounded-2xl border border-border bg-background shadow-xl">
+            <img src="./shots/bom.webp" width="1440" height="900" alt="" class="block w-full" data-alt-es="Una lista de materiales con el coste de cada material, la mano de obra y el precio sugerido" data-alt-en="A bill of materials with the cost of each material, labour and the suggested price" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+        <h2 class="text-3xl font-semibold tracking-tight"><span data-l="es">Qué incluye</span><span data-l="en">What's included</span></h2>
+        <ul class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <li class="rounded-2xl border border-border bg-surface p-5"><h3 class="font-semibold"><span data-l="es">Compras y Revisar</span><span data-l="en">Purchases and Review</span></h3><p class="mt-1.5 text-sm text-muted"><span data-l="es">Facturas, albaranes y tickets leídos y comprobados; también facturas electrónicas (Facturae, CFDI).</span><span data-l="en">Invoices, delivery notes and receipts read and checked; e-invoices too (Facturae, CFDI).</span></p></li>
+          <li class="rounded-2xl border border-border bg-surface p-5"><h3 class="font-semibold"><span data-l="es">Proveedores y precios</span><span data-l="en">Suppliers and prices</span></h3><p class="mt-1.5 text-sm text-muted"><span data-l="es">Historial de precios, avisos de subidas y cambios de cuenta bancaria que hay que verificar.</span><span data-l="en">Price history, warnings about rises, and bank-detail changes to verify.</span></p></li>
+          <li class="rounded-2xl border border-border bg-surface p-5"><h3 class="font-semibold"><span data-l="es">Inventario</span><span data-l="en">Inventory</span></h3><p class="mt-1.5 text-sm text-muted"><span data-l="es">Stock que cuadra con sus movimientos, puntos de pedido y pedidos a proveedor por correo.</span><span data-l="en">Stock that matches its movements, reorder points and purchase orders by email.</span></p></li>
+          <li class="rounded-2xl border border-border bg-surface p-5"><h3 class="font-semibold"><span data-l="es">Pedidos y facturas</span><span data-l="en">Orders and invoices</span></h3><p class="mt-1.5 text-sm text-muted"><span data-l="es">Pedidos de clientes por correo o WhatsApp con respuesta preparada; la factura se prepara al entregar.</span><span data-l="en">Client orders by email or WhatsApp with a reply drafted; the invoice is drafted on delivery.</span></p></li>
+          <li class="rounded-2xl border border-border bg-surface p-5"><h3 class="font-semibold"><span data-l="es">Preguntar</span><span data-l="en">Ask</span></h3><p class="mt-1.5 text-sm text-muted"><span data-l="es">«¿Quién nos debe dinero?», «¿qué material ha subido más?»: respuestas sacadas de tus cuentas.</span><span data-l="en">“Who owes us money?”, “which material went up most?”: answers from your own books.</span></p></li>
+          <li class="rounded-2xl border border-border bg-surface p-5"><h3 class="font-semibold"><span data-l="es">Comprobaciones y deshacer</span><span data-l="en">Checks and undo</span></h3><p class="mt-1.5 text-sm text-muted"><span data-l="es">Cada noche se revisa que todo cuadre. Todo lo que hace queda en Actividad y se puede deshacer.</span><span data-l="en">Every night it checks that everything adds up. Everything it does is in Activity and can be undone.</span></p></li>
+        </ul>
+      </section>
+
+      <!-- Your data -->
+      <section id="datos" class="scroll-mt-20 border-y border-border bg-surface">
+        <div class="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2">
+          <div>
+            <h2 class="text-3xl font-semibold tracking-tight"><span data-l="es">Tus datos se quedan contigo</span><span data-l="en">Your data stays with you</span></h2>
+            <p class="mt-4 text-muted leading-relaxed">
+              <span data-l="es">System 2 Manufacturing se instala en un ordenador de tu oficina, con Windows. Tus datos se guardan ahí, no en la nube; solo salen los documentos que lee la IA. Cada noche se hace una copia de seguridad. Los móviles se conectan por la wifi de la oficina o, desde fuera, por Tailscale.</span>
+              <span data-l="en">System 2 Manufacturing is installed on a computer at your office, running Windows. Your data is kept there, not in the cloud; only the documents the AI reads leave it. A backup is made every night. Phones connect over the office Wi-Fi or, from outside, through Tailscale.</span>
+            </p>
+          </div>
+          <div class="rounded-2xl border border-border bg-background p-6">
+            <h3 class="font-semibold"><span data-l="es">Lo que todavía no hace</span><span data-l="en">What it doesn't do yet</span></h3>
+            <ul class="mt-3 grid gap-2 text-sm text-muted">
+              <li><span data-l="es">· Enviar las facturas a Verifactu ni timbrarlas (CFDI): eso necesita un proveedor certificado.</span><span data-l="en">· Send invoices to Verifactu or stamp them (CFDI): that needs a certified provider.</span></li>
+              <li><span data-l="es">· Facturas rectificativas, cobros parciales ni conexión con el banco.</span><span data-l="en">· Credit notes, part payments or a bank connection.</span></li>
+              <li><span data-l="es">· La IA cuesta unos céntimos por documento y necesita internet; con una foto mala puede equivocarse, por eso lo dudoso siempre espera a una persona.</span><span data-l="en">· The AI costs a few cents per document and needs internet; a bad photo can fool it, which is why anything unsure always waits for a person.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to action -->
+      <section class="mx-auto max-w-6xl px-4 py-24 text-center sm:px-6">
+        <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl"><span data-l="es">Míralo funcionar</span><span data-l="en">See it working</span></h2>
+        <p class="mx-auto mt-4 max-w-xl text-muted">
+          <span data-l="es">Aprueba facturas, mira las listas de materiales, registra una producción y envía una foto desde el móvil. Nada se guarda: recargar la página lo deja como al principio.</span>
+          <span data-l="en">Approve invoices, look at the bills of materials, record a production run and send a photo from the phone. Nothing is kept: reloading the page puts it all back.</span>
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="./app.html" class="inline-flex h-12 items-center gap-2 rounded-xl bg-primary px-6 text-base font-medium text-primary-foreground shadow-sm hover:bg-primary-hover">
+            <span data-l="es">Probar la demo</span><span data-l="en">Try the demo</span><span aria-hidden="true">→</span>
+          </a>
+          <a data-contact href="#" hidden class="inline-flex h-12 items-center rounded-xl border border-border-strong bg-surface px-5 text-base font-medium hover:bg-surface-2">
+            <span data-l="es">Hablemos</span><span data-l="en">Get in touch</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-border">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-8 text-sm text-subtle sm:px-6">
+        <span>© <span data-year>2026</span> Sistemas Alejandro · System 2 Manufacturing</span>
+        <span data-l="es">La demo usa datos inventados.</span><span data-l="en">The demo uses made-up data.</span>
+      </div>
+    </footer>
+  </body>
+</html>

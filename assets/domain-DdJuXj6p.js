@@ -1,0 +1,1 @@
+function s(t,h=.08){if(!t.length)return[0,1];const r=Math.min(...t),M=Math.max(...t),m=t.reduce((n,d)=>n+d,0)/t.length,c=Math.max(0,Math.min(r,m*(1-h))),i=Math.max(M,m*(1+h)),a=(i-c)/4,e=10**Math.floor(Math.log10(a||1)),o=[1,2,2.5,5,10].map(n=>n*e).find(n=>n>=a)??a;return[Math.floor(c/o)*o,Math.ceil(i/o)*o]}export{s as p};

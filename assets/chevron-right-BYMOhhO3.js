@@ -1,0 +1,1 @@
+import{l as o}from"./use-format-eQDYdCDF.js";const e={name:"arrow-up",size:24,node:[["path",{d:"m5 12 7-7 7 7",key:"hav0vg"}],["path",{d:"M12 19V5",key:"x0mq9r"}]]};e.node;const t=o(e);const a={name:"chevron-right",size:24,node:[["path",{d:"m9 18 6-6-6-6",key:"mthhwq"}]]};a.node;const r=o(a);export{t as A,r as C};

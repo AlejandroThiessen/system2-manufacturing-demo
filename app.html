@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Demo de System 2 Manufacturing con datos de ejemplo: la oficina de un taller que lee facturas, lleva el stock, los costes y la producción." />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)" />
+    <title>System 2 Manufacturing · Demo</title>
+    <style>
+      html { background: #f6f7f9; color-scheme: light; }
+      html.dark { background: #0b0d12; color-scheme: dark; }
+      .s2-boot { display: flex; min-height: 100dvh; flex-direction: column; gap: 1rem; align-items: center; justify-content: center; font: 15px system-ui, sans-serif; color: #475467; }
+      html.dark .s2-boot { color: #9aa4b2; }
+      .s2-boot svg { animation: s2-pulse 1.4s ease-in-out infinite; }
+      @keyframes s2-pulse { 50% { opacity: 0.55 } }
+      @media (prefers-reduced-motion: reduce) { .s2-boot svg { animation: none } }
+    </style>
+    <script>
+      // The saved theme and language before the first paint (the app keeps them in this browser).
+      (function () {
+        try {
+          var saved = JSON.parse(localStorage.getItem("s2:ui") || "{}").state || {};
+          var theme = saved.theme || "system";
+          var dark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+          document.documentElement.classList.toggle("dark", dark);
+          var lang = saved.language || (navigator.language && navigator.language.toLowerCase().indexOf("es") === 0 ? "es" : "en");
+          document.documentElement.lang = lang;
+          if (lang === "en") document.addEventListener("DOMContentLoaded", function () {
+            var text = document.getElementById("s2-boot-text");
+            if (text) text.textContent = "Preparing the demo…";
+          });
+        } catch (_) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/app-DAF3ecTP.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/demo-CkBTS_yf.js">
+    <link rel="modulepreload" crossorigin href="./assets/use-format-eQDYdCDF.js">
+    <link rel="stylesheet" crossorigin href="./assets/demo-B40Xj7vJ.css">
+    <link rel="stylesheet" crossorigin href="./assets/use-format-D8K2R-wk.css">
+  </head>
+  <body>
+    <div id="root">
+      <div class="s2-boot" role="status">
+        <svg viewBox="0 0 32 32" width="44" height="44" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#2350d1" />
+          <path d="M9 11.5c0-2 1.7-3.5 4.2-3.5 2.6 0 4.3 1.5 4.3 3.6 0 1.6-.9 2.7-2.6 4L11.6 18.6H18v2.9H9v-2.4l5.1-4.3c1-.9 1.4-1.4 1.4-2.1 0-.8-.7-1.4-1.8-1.4-1.2 0-1.9.7-1.9 1.8H9Z" fill="#fff" />
+          <rect x="20" y="18.6" width="3.5" height="2.9" rx="1" fill="#9db4ff" />
+        </svg>
+        <span id="s2-boot-text">Preparando la demo…</span>
+      </div>
+    </div>
+  </body>
+</html>
